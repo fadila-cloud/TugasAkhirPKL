@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Store</title>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style CSS -->
+    <style>
+      /* Media Queries */
+
+      /* Tablet */
+      @media screen and (max-width: 720px) {
+        html {
+          font-size: 70%;
+        }
+      }
+
+      /* Handphone */
+      @media screen and (max-width: 450px) {
+        html {
+          font-size: 60%;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #b5b5b5;
+      }
+      .navbar {
+        display: flex; /* flex digunakan untuk navbar */
+        /* justify untuk letak horizontal */
+        /* space-between dignkn supaya space antar item sama rata */
+        justify-content: space-between;
+        align-items: center; /*align untuk letak vertical */
+        padding: 11px;
+        border-bottom: 1px solid #000;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .navbar .nav-logo {
+        font-family: "Poppins", sans-serif;
+        font-size: 35px;
+        font-weight: bold;
+        color: #4a4a4a;
+      }
+      /*Menu Side Bar di kanan*/
+      .navbar .nav {
+        color: #3e3e3e;
+        top: 0;
+        right: -100%;
+        width: 30%;
+      }
+      .navbar .nav a:hover {
+        color: #000;
+        transition: 0.2s;
+        border-bottom: 1px solid;
+      }
+      .navbar .nav-extract a {
+        color: #353535;
+      }
+      .navbar .nav-extract a:hover {
+        color: #000;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product img {
+        margin-top: 68px;
+        max-width: 17%;
+        height: auto;
+      }
+      .product {
+        text-align: center;
+      }
+      .star-icons {
+        fill: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="nav-logo"
+        ><i>multi<span style="color: #b3b3b3">store</span>.</i></a
+      >
+
+      <div class="nav">
+        <a href="#" style="color: #353535; padding: 5px">Home</a>
+        <a href="#product" style="color: #353535; padding: 5px">Products</a>
+        <a href="#about" style="color: #353535; padding: 5px">About Us</a>
+        <a href="#contact" style="color: #353535; padding: 5px">Contact Us</a>
+      </div>
+
+      <div class="nav-extract">
+        <!-- id digunakan untuk java script nantinya -->
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <!--Untuk icon search di navbar(feathericons)-->
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <!--Untuk icon keranjang belanja di navbar(feathericons)-->
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+        <!--Untuk icon menu di navbar(feathericons)-->
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Menu Products Start -->
+    <div class="products">
+      <div class="product">
+        <img src="products/1.jpg" alt="product1" />
+        <h3 style="font-weight: bold; font-size: 20px">Headphone</h3>
+        <p>Rp. 178.000</p>
+        <ul>
+          <li><i data-feather="star" class="star-icons"></i></li>
+          <li><i data-feather="star" class="star-icons"></i></li>
+          <li><i data-feather="star" class="star-icons"></i></li>
+          <li><i data-feather="star" class="star-icons"></i></li>
+          <li><i data-feather="star"></i></li>
+        </ul>
+        <button style="padding: 10px; border: 1px solid #000">Tambah ke Troli</button>
+        <button style="padding: 10px; border: 1px solid #000">Buy Now</button>
+      </div>
+    </div>
+    <!-- Menu Products End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
